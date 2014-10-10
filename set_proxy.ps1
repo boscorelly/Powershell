@@ -6,6 +6,7 @@ Push-Location
 Set-Location $regkey
 
 if ( (Get-ItemProperty . ProxyEnable) -ne '0' ) {
+    Write-Host "Proxy not set. Configuring."
     Set-ItemProperty . ProxyEnable -Value 1
     Set-ItemProperty . ProxyServer -Value $proxy 
 }
