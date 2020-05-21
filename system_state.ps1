@@ -1,13 +1,12 @@
 # =======================================================
 # NAME: maintenance_preventive.ps1
-# AUTHOR: Camille OlliÈ, Solutek
+# AUTHOR: Camille Olli√©
 # DATE: 11/14/2016
 #
-# KEYWORDS: YYY, XXXXXXXXX , AAAAAA
 # VERSION 0.2
 # 11/14/2016 ajout de la fonction de date
-# 11/14/2016 ajout de la fonction de verification des M‡J
-# 11/14/2016 ajout de la fonction de vÈrification de l'espace disque
+# 11/14/2016 ajout de la fonction de verification des M√†J
+# 11/14/2016 ajout de la fonction de v√©rification de l'espace disque
 # COMMENTS: Desription des traitements
 #
 # =======================================================
@@ -17,7 +16,7 @@ $date = Get-Date -format yyyy-M-d
 $ErrorActionPreference="SilentlyContinue"
 Stop-Transcript | out-null
 $ErrorActionPreference = "Continue"
-Start-Transcript -path c:\_maintenance_$date.txt
+Start-Transcript -path c:\Users\$env:username\Desktop\System-State_$date.txt
 
 # Etat des disques
 write-host "`r"
